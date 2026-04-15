@@ -41,8 +41,8 @@ h1, h2, h3 {
 }
 
 .maddie-box {
-  width: 240px;
-  flex-shrink: 0;
+  flex: 1 0 0;
+  min-width: 0;
 }
 
 .general-box {
