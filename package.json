@@ -1,0 +1,25 @@
+{
+  "name": "inky-dashboard",
+  "version": "1.0.0",
+  "description": "A web application for setting up a personal dashboard with an Inky e-ink display.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"tsx server/index.ts\" \"cd client && npm run dev -- --port 5173\"",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "puppeteer-core": "^24.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.21.0"
+  }
+}

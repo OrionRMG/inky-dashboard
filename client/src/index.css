@@ -1,0 +1,311 @@
+p {
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  margin: 0px;
+  font-weight: normal;
+}
+
+/* Display page layout */
+
+#display-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #FFF8EE;
+}
+
+.top-section {
+  display: flex;
+  flex: 1 0 0;
+  min-height: 0;
+}
+
+.bottom-section {
+  border-top: 1px dashed #DBB4AC;
+  height: 279px;
+  overflow: clip;
+}
+
+.list-box {
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+.orion-box {
+  flex: 1 0 0;
+  min-width: 0;
+  border-right: 1px dashed #DBB4AC;
+}
+
+.maddie-box {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.general-box {
+  width: 100%;
+}
+
+/* Headers */
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+}
+
+.orion-title {
+  font-family: 'Jacquard 24', serif;
+  font-size: 64px;
+  line-height: 50px;
+  background: linear-gradient(to bottom, #FF876E, #6F142F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 4px solid #D46A54;
+  padding: 8px 16px;
+}
+
+.maddie-title {
+  font-family: 'Butterfly Kids', cursive;
+  font-size: 56px;
+  line-height: 50px;
+  background: linear-gradient(to bottom, #E24B89, #821793);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 4px solid #E24B89;
+  padding: 8px 16px;
+}
+
+.general-header {
+  justify-content: flex-start;
+  padding: 16px 24px;
+}
+
+.general-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #484848;
+}
+
+/* List items */
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 20px;
+  white-space: nowrap;
+}
+
+.list-item-bullet {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 32px;
+  line-height: 12px;
+  flex-shrink: 0;
+}
+
+.bullet-orion {
+  color: #D56B54;
+}
+
+.bullet-maddie {
+  color: #E34B88;
+}
+
+.bullet-general {
+  color: #484848;
+}
+
+.list-item-text {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  color: #3E2E31;
+}
+
+/* Input page */
+
+#input-page {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px 16px;
+  overflow: auto;
+  color: #484848;
+}
+
+.input-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.input-form-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.submit-btn {
+  background-color: #494949;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled,
+.add-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+#input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.owner-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field-label {
+  font-size: 20px;
+}
+
+.owner-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.owner-dropdown select {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.owner-value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.chevron-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text-field input {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: #484848;
+  border: none;
+  border-bottom: 2px solid #484848;
+  padding: 8px;
+  outline: none;
+  background: transparent;
+}
+
+.text-field input::placeholder {
+  color: #929292;
+}
+
+.add-btn {
+  background-color: #494949;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Input page list */
+
+.input-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-list-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.input-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-list-item-text {
+  font-size: 16px;
+}
+
+.trash-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.bare-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.status-msg {
+  font-size: 16px;
+}
+
+.status-success {
+  color: #2e7d32;
+}
+
+.status-error {
+  color: #cd3e3e;
+}
+
