@@ -55,7 +55,7 @@ export default function InputForm() {
     const hasPendingChanges = pendingAdds.length > 0 || pendingRemoveIndices.size > 0
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/items")
+        fetch("/api/items")
             .then(res => res.json())
             .then(data => setServerItems(data.items))
     }, [])
@@ -84,7 +84,7 @@ export default function InputForm() {
             ...pendingAdds,
         ]
         try {
-            const res = await fetch("http://localhost:3000/api/items", {
+            const res = await fetch("/api/items", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ items: finalItems }),
