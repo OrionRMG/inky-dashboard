@@ -17,9 +17,9 @@ function debounce(fn, delay) {
 async function captureDisplay(isLandscape: boolean) {
   console.log('Capturing display...');
   const browser = await puppeteer.launch({
-    executablePath: '/usr/bin/chromium-browser',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
-  });
+      executablePath: "/usr/bin/chromium",
+      args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+  })
   let width = isLandscape ? DISPLAY_LONG : DISPLAY_SHORT
   let height = isLandscape ? DISPLAY_SHORT : DISPLAY_LONG
 
