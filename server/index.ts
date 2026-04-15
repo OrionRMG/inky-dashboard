@@ -3,7 +3,7 @@ import cors from "cors"
 import fs from "fs"
 import chokidar from "chokidar"
 import path from "path"
-// import { debouncedCapture } from "./capture-display"
+import { debouncedCapture } from "./capture-display"
 const port = 3000
 
 const app = express()
@@ -54,7 +54,9 @@ app.listen(port, "0.0.0.0", () => {
     console.log("Server running on port " + port)
 })
 
-// chokidar.watch(DATA_FILE, {
-//   persistent: true,
-//   ignoreInitial: true,   // don't trigger on startup
-// }).on('change', () => debouncedCapture);
+chokidar
+    .watch(DATA_FILE, {
+        persistent: true,
+        ignoreInitial: true, // don't trigger on startup
+    })
+    .on("change", () => debouncedCapture)
