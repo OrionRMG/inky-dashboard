@@ -59,4 +59,4 @@ chokidar
         persistent: true,
         ignoreInitial: true, // don't trigger on startup
     })
-    .on("change", () => debouncedCapture)
+    .on("change", () => debouncedCapture())
